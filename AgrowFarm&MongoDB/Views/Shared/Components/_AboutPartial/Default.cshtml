@@ -1,0 +1,34 @@
+﻿@using AgrowFarm_MongoDB.Entities;
+@model List<About>
+
+<section class="w3l-about-6 py-5" id="about">
+	@foreach (var item in Model)
+	{
+		<div class="container py-lg-5 py-md-3">
+			<div class="row align-items-center">
+				<div class="col-lg-6 pe-lg-5">
+					<h6 class="title-subw3hny">Hakkımızda</h6>
+					<h3 class="title-w3l">@item.Title</h3>
+					<p class="mt-md-4 mt-3">@item.Description </p>
+					<ul class="service-list pt-lg-2 mt-4">
+
+						<li class="service-link"><a href="#url"><span class="fa fa-check-circle"></span> @item.Service1</a></li>
+						<li class="service-link"><a href="#url"><span class="fa fa-check-circle"></span> @item.Service2</a></li>
+						<li class="service-link"><a href="#url"><span class="fa fa-check-circle"></span> @item.Service3</a></li>
+					</ul>
+				</div>
+				<div class="HomeAboutImages col-lg-6 mt-lg-0 mt-5">
+					<div class="row position-relative">
+						<div class="col-6">
+							<img src=@item.ImageUrl1 alt="" class="radius-image img-fluid">
+						</div>
+						<div class="col-6 mt-4">
+							<img src=@item.ImageUrl2 alt="" class="radius-image img-fluid mb-md-3 mb-2">
+							<img src=@item.ImageUrl3 alt="" class="radius-image img-fluid mt-md-3">
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	}
+</section>

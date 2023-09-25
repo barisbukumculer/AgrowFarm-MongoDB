@@ -1,0 +1,54 @@
+﻿@using AgrowFarm_MongoDB.Entities;
+@model List<WhyUs>
+
+<section class="w3l-circles py-5" id="circles">
+	<div class="container py-md-5 py-2">
+		<!--/row-2-->
+		@foreach (var item in Model)
+		{
+			<div class="row w3l-circles">
+				<div class="col-lg-6 circles-left">
+					<img src=@item.ImageUrl alt="" class="radius-image img-fluid">
+				</div>
+				<div class="col-lg-6 circles-right mt-lg-0 mt-5 align-self  position-relative">
+					<h6 class="title-subw3hny">Neden Biz</h6>
+					<h3 class="title-w3l mb-4">@item.Title</h3>
+					<p class="mb-5">
+						@item.Description
+					</p>
+					<div class="progress-circles-grids">
+						<div class="progress-circles">
+							<div class="progress-left">
+								<div class="circle1">
+									<div id="progress" data-dimension="@item.CirclePercent1" data-text="@item.CirclePercent1%" data-fontsize="18" data-percent="@item.CirclePercent1" data-fgcolor="#006837" data-bgcolor="#f3f5f4" data-width="10" data-bordersize="4" data-animationstep="2">
+									</div>
+
+								</div>
+								<div class="progress-right">
+									<h4>@item.CircleTitle1</h4>
+									<p class="mb-lg-5">@item.CircleDescription1</p>
+								</div>
+							</div>
+
+						</div>
+						<div class="progress-circles">
+							<div class="progress-left">
+								<div class="circle1">
+									<div id="progress1" data-dimension="@item.CirclePercent2" data-text="@item.CirclePercent2%" data-fontsize="18" data-percent="@item.CirclePercent2" data-fgcolor="#006837" data-bgcolor="#f3f5f4" data-width="10" data-bordersize="4" data-animationstep="2">
+									</div>
+								</div>
+								<div class="progress-right">
+									<h4>Quality Agriculture</h4>
+									<p class="mb-lg-5">Lorem ipsum feugiat dolor sit amet.</p>
+								</div>
+							</div>
+
+						</div>
+					</div>
+				</div>
+			</div>
+
+		}
+		<!--//row-2-->
+	</div>
+</section>

@@ -1,0 +1,29 @@
+﻿@using AgrowFarm_MongoDB.Entities;
+@model List<Banner>
+<section class="banner-19">
+    <div class="banner-layer">
+        @foreach (var item in Model)
+        {
+            <div class="main-content-top">
+                <div class="container">
+                    <div class="main-content">
+                        <div class="w3lbanner-left">
+                            <!-- if logo is image enable this
+                            <a class="logo" href="index.html">
+                                <img src="image-path" alt="Your logo" title="Your logo" style="height:35px;" />
+                            </a> -->
+                            <h6>@item.Title1</h6>
+                            <h4>@item.Title2 </h4>
+
+                            <a href="about.html" class="btn btn-style btn-secondary mt-md-5 mt-4">Daha Fazlasını Oku</a>
+                        </div>
+                        <div class="w3lbanner-right">
+                            <p>@item.Description</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        }
+    </div>
+</section>

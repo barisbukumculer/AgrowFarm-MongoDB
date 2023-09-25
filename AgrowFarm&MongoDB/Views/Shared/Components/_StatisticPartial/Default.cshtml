@@ -1,0 +1,30 @@
+﻿@using AgrowFarm_MongoDB.Entities;
+@model List<Statistic>
+<section class="w3l-stats-main py-5" id="stats">
+    <div class="container py-lg-4">
+        <div class="row stats-con">
+            @foreach (var item in Model)
+            {
+                <div class="col-lg-6 stats-content-left pe-lg-5">
+                    <div class="stats_info counter_grid1 text-left">
+                        <div class="icon stat-icon">
+                            <span class="fas fa-users"></span>
+                            <p class="counter">@item.Size</p>
+                        </div>
+                        <div class="stat-icon-des text-left">
+
+                            <h3 class="title-w3l">
+
+                                @item.Title
+                            </h3>
+                            <p class="para-stat">
+                                @item.Description
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            }
+
+        </div>
+    </div>
+</section>

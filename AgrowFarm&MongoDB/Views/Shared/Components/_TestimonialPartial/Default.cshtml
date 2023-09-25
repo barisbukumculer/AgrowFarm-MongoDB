@@ -1,0 +1,46 @@
+﻿@using AgrowFarm_MongoDB.Entities;
+@model List<Testimonial>
+<section class="w3l-testimonials" id="testimonials">
+    <!-- /grids -->
+    <div class="cusrtomer-layout py-5">
+        <div class="container py-lg-4 py-md-3 py-2 pb-lg-0">
+            <h5 class="title-subw3hny text-center mb-1">MUTLU MÜŞTERİLER</h5>
+            <h3 class="title-w3l two text-center mb-sm-5 mb-4">İncelemeler ve Görüşler</h3>
+            <!-- /grids -->
+            @foreach (var item in Model)
+            {
+
+
+                <div class="testimonial-width">
+                    <div id="owl-demo1" class="owl-two owl-carousel owl-theme">
+                        <div class="item">
+                            <div class="testimonial-content">
+                                <div class="testimonial">
+                                    <i class="fas fa-quote-right"></i>
+                                    <blockquote>
+                                        <q>
+                                            @item.Description
+                                        </q>
+                                    </blockquote>
+                                    <div class="testi-des">
+                                        <div class="test-img">
+                                            <img src=@item.Title1 class="img-fluid" alt="client-img">
+                                        </div>
+                                        <div class="peopl align-self">
+                                            <h3>@item.Name</h3>
+                                            <p class="indentity">@item.City</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+            }
+        </div>
+        <!-- /grids -->
+    </div>
+    <!-- //grids -->
+</section>
